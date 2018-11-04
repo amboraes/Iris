@@ -68,7 +68,7 @@ app.set('view engine', 'ejs');
 //Public folder
 app.use(express.static('./public'));
 
-app.get('/', (req, res) => res.render('index'));
+app.get('/', (req, res) => res.render('upload'));
 
 app.post('/analisis', (req,res)=>{
   let options={

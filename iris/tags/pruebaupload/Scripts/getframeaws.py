@@ -3,8 +3,10 @@ import numpy as np
 import os
 import boto3
 import sys
+import time
 
 print("Done")
+starttime=time.time()
 def porcentaje():
     arc = open('out.json', 'r+')
     tmp = arc.readline()
@@ -86,7 +88,7 @@ archivo = open('out.json','w+')
 while rval:
     rval, frame = vc.read()
 
-    if(c%10==0):
+    if(c%30 == 0):
         cv2.imwrite(str(c) + '.jpg', frame)
         imageFile=str(c)+'.jpg'
         with open(imageFile, 'rb') as image:
@@ -106,3 +108,4 @@ archivo.close()
 vc.release()
 cv2.destroyAllWindows()
 porcentaje()
+print("---%s seconds ---"%(time.time()-starttime))
