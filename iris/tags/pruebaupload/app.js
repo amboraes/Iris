@@ -68,7 +68,7 @@ app.set('view engine', 'ejs');
 //Public folder
 app.use(express.static('./public'));
 
-app.get('/', (req, res) => res.render('upload'));
+app.get('/', (req, res) => res.render('index'));
 
 app.post('/analisis', (req,res)=>{
   let options={
@@ -91,7 +91,11 @@ app.post('/analisis', (req,res)=>{
   });
   //res.send("done");
 });
-
+app.post('/tags',(req,res)=>{
+  res.render('upload',{
+    msd:'Ingrese los tags'
+  });
+});
 app.post('/upload', (req, res) => {
   upload(req, res, (err) => {
     if (err) {
@@ -106,8 +110,7 @@ app.post('/upload', (req, res) => {
       }else{
         analizar();
         res.render('index', {
-          msg: 'File uploaded',
-          msg: 'Se inicia el procesamiento del video',
+          msg: 'Se inicia el procesamiento del video (este procesamiento se demora un tiempo estimado del doble de la duración del video agregado)',
           file:`uploads/${req.file.filename}`
         });
 
