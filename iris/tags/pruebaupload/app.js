@@ -58,12 +58,16 @@ function analizar(req,res){
 }
 //Función para llamar al archivo de python y realizar el analisis
 
-
 //init app
 const app = express();
 
 //ejs
 app.set('view engine', 'ejs');
+
+app.get('/download',function(req,res){
+  res.download(__dirname +'/porcentaje.txt');
+});
+
 
 //Public folder
 app.use(express.static('./public'));

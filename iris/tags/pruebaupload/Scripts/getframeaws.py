@@ -19,7 +19,7 @@ def porcentaje():
     contcalm = 0
     contunknown = 0
     contgeneral = 0
-    wr = open('porcentaje.json', 'w+')
+    wr = open('porcentaje.txt', 'w+')
     while True:
         tmp= tmp.replace('{',"")
         tmp = tmp.replace('}',"")
@@ -61,14 +61,14 @@ def porcentaje():
         #print(tmp.isspace())
         if tmp == '':
             break
-    wr.write('{"HAPPY":'+str(conthappy/contgeneral)+',\n')
-    wr.write('"SAD":'+str(contsad/contgeneral)+',\n')
-    wr.write('"ANGRY":'+str(contangry/contgeneral)+',\n')
-    wr.write('"CONFUSED":'+str(contconfused/contgeneral)+',\n')
-    wr.write('"DISGUSTED":'+str(contdisgusted/contgeneral)+',\n')
-    wr.write('"SURPRISED":'+str(contsurprised/contgeneral)+',\n')
-    wr.write('"CALM":'+str(contcalm/contgeneral)+',\n')
-    wr.write('"UNKNOWN":'+str(contunknown/contgeneral)+'\n}')
+    wr.write('HAPPY:'+str(conthappy/contgeneral)+'\n')
+    wr.write('SAD:'+str(contsad/contgeneral)+'\n')
+    wr.write('ANGRY:'+str(contangry/contgeneral)+'\n')
+    wr.write('CONFUSED:'+str(contconfused/contgeneral)+'\n')
+    wr.write('DISGUSTED:'+str(contdisgusted/contgeneral)+'\n')
+    wr.write('SURPRISED:'+str(contsurprised/contgeneral)+'\n')
+    wr.write('CALM:'+str(contcalm/contgeneral)+'\n')
+    wr.write('UNKNOWN:'+str(contunknown/contgeneral)+'\n')
     arc.close()
     wr.close()
 
