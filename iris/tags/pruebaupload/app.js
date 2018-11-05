@@ -48,7 +48,7 @@ function analizar(req,res){
   };
   py.PythonShell.run('../Scripts/getframeaws.py',options,function(err, results){
     if(err){
-      res.status(500).send({error:err});
+      //res.status(500).send({error:err});
       console.log(err);
       return;
     }
@@ -93,7 +93,7 @@ app.post('/analisis', (req,res)=>{
 });
 app.post('/tags',(req,res)=>{
   res.render('upload',{
-    msd:'Ingrese los tags'
+    msg:'Ingrese los tags'
   });
 });
 app.post('/upload', (req, res) => {
