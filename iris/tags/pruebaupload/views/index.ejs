@@ -42,14 +42,9 @@
     </form>
     <form action="/tags" method="POST">
       <button class="btn">Tags</button>
-
     </form>
-
     <video id="myvideo" src="<%=typeof file !='undefined' ? file : '' %>" width="400" height="400" controls=True class="responsive-img"></video>
-
   </div>
-
-
   </script>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -66,7 +61,25 @@
       }
     };
   </script>
+</style>
+<svg width="315" height="245"></svg>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+var datos = [330, 200, 00, 130, 00, 330, 00, 00 ];
+var config = { columnWidth: 45, columnGap: 5, margin: 10, height: 250  };
 
+d3.select("svg")
+    .selectAll("rect")
+    .data(datos)
+  .enter().append("rect")
+    .attr("width", config.columnWidth)
+    .attr("x", function(d,i) { return config.margin + i * (config.columnWidth + config.columnGap) })
+    .attr("y", function(d,i) { return config.height - d })
+    .attr("height", function(d,i) { return d })
+</script>
+De izquierda a derecha se encuentran los valores de:
+<br>
+HAPPY,SAD,ANGRY,CONFUSED,DISGUSTED,SURPRISED,CALM,UNKNOWN
 </body>
 
 </html>

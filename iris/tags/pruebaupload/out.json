@@ -1,5 +1,0 @@
-[{'Type': 'HAPPY', 'Confidence': 52.41563415527344}, {'Type': 'CONFUSED', 'Confidence': 10.541397094726562}, {'Type': 'SURPRISED', 'Confidence': 3.2846033573150635}]
-[{'Type': 'SAD', 'Confidence': 25.340789794921875}, {'Type': 'HAPPY', 'Confidence': 21.62614631652832}, {'Type': 'SURPRISED', 'Confidence': 2.6049256324768066}]
-[{'Type': 'HAPPY', 'Confidence': 85.38665008544922}, {'Type': 'SURPRISED', 'Confidence': 7.687955856323242}, {'Type': 'CONFUSED', 'Confidence': 2.104240655899048}]
-[{'Type': 'HAPPY', 'Confidence': 91.93605041503906}, {'Type': 'SURPRISED', 'Confidence': 3.8105368614196777}, {'Type': 'SAD', 'Confidence': 1.4989852905273438}]
-[{'Type': 'HAPPY', 'Confidence': 98.98934936523438}, {'Type': 'SAD', 'Confidence': 3.9613723754882812}, {'Type': 'SURPRISED', 'Confidence': 1.0528564453125}]

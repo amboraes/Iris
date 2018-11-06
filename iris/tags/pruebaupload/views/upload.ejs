@@ -173,8 +173,22 @@
       var tm = document.getElementById("sel");
       tm.remove(tm.selectedIndex);
     });
+    var datos = [330, 200, 00, 130, 00, 330, 00, 00 ];
+    var config = { columnWidth: 45, columnGap: 5, margin: 10, height: 250  };
+
+    d3.select("svg")
+        .selectAll("rect")
+        .data(datos)
+      .enter().append("rect")
+        .attr("width", config.columnWidth)
+        .attr("x", function(d,i) { return config.margin + i * (config.columnWidth + config.columnGap) })
+        .attr("y", function(d,i) { return config.height - d })
+        .attr("height", function(d,i) { return d })
+
+De izquierda a derecha se encuentran los valores de HAPPY,SAD,ANGRY,CONFUSED,DISGUSTED,SURPRISED,CALM,UNKNOWN
 
   </script>
+
 
 </body>
 
