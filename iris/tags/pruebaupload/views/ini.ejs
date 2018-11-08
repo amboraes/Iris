@@ -5,14 +5,32 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-  <title>Iris Emotion Recognition</title>
+  <style>
+  body, html {
+    height: 100%;
+  }
+  .bg{
+    background-image: url("uploads/iris.jpg");
+    width: 100vw;
+    height: 100vh;
+
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  nav{
+    background:transparent;
+  }
+
+  </style>
 </head>
 
-<body>
+<body class="bg">
 
   <nav>
-    <div class="nav-wrapper black">
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
+    <div class="nav-wrapper">
+      <ul id="nav-mobile" class="center-align hide-on-med-and-down">
         <li><a href="/">Home</a></li>
         <li><a href="/subir">Subir video</a></li>
         <li><a href="/upload">Visualizar video</a></li>
@@ -21,25 +39,13 @@
     </div>
   </nav>
 
-
-
-  <div class="container">
-    <h1>Iris reconocimiento de emociones</h1>
-    <%=typeof msg !='undefined' ? msg : '' %>
-    <form action="/upload" method="POST" enctype="multipart/form-data">
-      <div class="file-field input-field">
-        <div class="btn grey">
-          <span>File</span>
-          <input name="video" type="file">
-        </div>
-        <div class="file-path-wrapper">
-          <input class="file-path validate" type="text">
-        </div>
-      </div>
-      <button type="submit" class="btn grey">Submit</button>
-    </form>
+  <div>
+    <h2>aaa</h2>
+    <h2>aaa</h2>
+    <h1 class="center-align white-text">Welcome to Iris</h1>
   </div>
-  </script>
+
+
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

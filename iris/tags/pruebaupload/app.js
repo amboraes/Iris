@@ -2,7 +2,6 @@ const express = require('express');
 const multer = require('multer');
 const ejs = require('ejs');
 const path = require('path');
-var popup = require('js-alert');
 var py = require('python-shell');
 
 //set storage engine
@@ -72,7 +71,7 @@ app.get('/download',function(req,res){
 //Public folder
 app.use(express.static('./public'));
 
-app.get('/', (req, res) => res.render('index'));
+app.get('/', (req, res) => res.render('ini'));
 
 app.post('/analisis', (req,res)=>{
   let options={
@@ -100,6 +99,19 @@ app.post('/tags',(req,res)=>{
     msg:'Ingrese los tags'
   });
 });
+
+app.get('/upload',(req,res)=>{
+  res.render('video');
+});
+
+app.get('/subir',(req,res)=>{
+  res.render('index');
+});
+
+app.get('/tags',(req,res)=>{
+  res.render('upload');
+});
+
 app.post('/upload', (req, res) => {
   upload(req, res, (err) => {
     if (err) {
@@ -113,7 +125,7 @@ app.post('/upload', (req, res) => {
         });
       }else{
         analizar();
-        res.render('index', {
+        res.render('video', {
           msg: 'Se inicia el procesamiento del video (este procesamiento se demora un tiempo estimado del doble de la duración del video agregado)',
           file:`uploads/${req.file.filename}`
         });

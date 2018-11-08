@@ -18,5 +18,8 @@
     "js-alert": "^1.0.4",
     "multer": "^1.4.1",
     "python-shell": "^1.0.6"
+  },
+  "engines":{
+    "node":"8.10.0"
   }
 }
