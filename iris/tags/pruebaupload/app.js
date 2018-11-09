@@ -135,6 +135,6 @@ app.post('/upload', (req, res) => {
   });
 });
 
-const port = 3000;
+const port = 80;
 
 app.listen(port, () => console.log(`server started on port ${port}`));
