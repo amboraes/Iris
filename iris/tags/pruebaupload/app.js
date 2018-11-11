@@ -67,6 +67,10 @@ app.get('/download',function(req,res){
   res.download(__dirname +'/porcentaje.txt');
 });
 
+app.get('/emotions', function(req,res){
+  res.render('emotions');
+});
+
 
 //Public folder
 app.use(express.static('./public'));
@@ -135,6 +139,6 @@ app.post('/upload', (req, res) => {
   });
 });
 
-const port = 80;
+const port = 3000;
 
 app.listen(port, () => console.log(`server started on port ${port}`));
