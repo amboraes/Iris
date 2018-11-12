@@ -21,12 +21,14 @@
       </ul>
     </div>
   </nav>
-  <svg width="315" height="245"></svg>
+  <h2></h2>
+  <p class="center-align">
+  <svg width="615" height="245" class="center-align"></svg>
   <script src="http://d3js.org/d3.v3.min.js"></script>
-  <script>
-    var datos = [330, 200, 00, 130, 00, 330, 00, 00];
+  <script type="text/javascript">
+    var datos = [330, 200, 0, 130, 0, 330, 0, 0];
     var config = {
-      columnWidth: 45,
+      columnWidth: 60,
       columnGap: 5,
       margin: 10,
       height: 250
@@ -47,12 +49,27 @@
         return d
       })
   </script>
-  De izquierda a derecha se encuentran los valores de:
-  <br>
-  HAPPY,SAD,ANGRY,CONFUSED,DISGUSTED,SURPRISED,CALM,UNKNOWN
+  <h1></h1>
+  <p class="center-align"> HAPPY    SAD ANGRY CONFUSED DISGUSTED SURPRISED CALM UNKNOWN</p>
+  <p class="center-align">De izquierda a derecha se encuentran los valores de:</p>
+</p>
+
+<p class="center-align">
+  <button action="/download" method="GET" id="descargar"class="btn grey darken-2">Descargar emociones</button>
+</p>
+
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script type="text/javascript">
+  $("#descargar").click(function(){
+    window.open('/download');
+  });
+
+  descargar.addEventListener("click",function(){
+    alert("Recuerde que si no espero el tiempo debido para el procesamiento del video no se descargara el archivo con los datos correctos");
+  });
+  </script>
 </body>
 
 </html>

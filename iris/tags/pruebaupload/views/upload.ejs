@@ -97,9 +97,6 @@
       <button id="ir"class="btn grey darken-2">Ir al tag</button>
       <button id="borrar"class="btn grey darken-2">Borrar Tag</button>
     </p>
-    <p>
-      <button action="/download" method="GET" id="descargar"class="btn grey darken-2">Descargar emociones</button>
-    </p>
 
   </div>
 
@@ -109,13 +106,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script type="text/javascript">
-    $("#descargar").click(function(){
-      window.open('/download');
-    });
 
-    descargar.addEventListener("click",function(){
-      alert("Recuerde que si no espero el tiempo debido para el procesamiento del video no se descargara el archivo con los datos correctos");
-    });
     var myvideo = document.getElementById('myvideo');
     //Creo el select para ir guardando los tags
     var sel = document.createElement("select");
